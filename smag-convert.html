@@ -19,12 +19,21 @@
     <input type="text">
     <pre id="output"></pre>
     <script>
+      var to = true 
       function translate(str) {
+        if (to) {
         var str = str.toLowerCase();
         ["⍋", "b", "c", "中", "Ψ", "⎎", "g", "⊑", "ꔌ", "j", "ᔑ", "⌰", "m", "人", "⍛", "p", "q", "χ", "Ⲝ", "ਠ", "u", "⍚", "⍙", "ꕕ", "∀", "⋉"].forEach((r, i) => {
           str = str.replaceAll(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"][i], r)
         })
         return str 
+        } else {
+        var str = str.toLowerCase();
+        ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"].forEach((r, i) => {
+          str = str.replaceAll(["⍋", "b", "c", "中", "Ψ", "⎎", "g", "⊑", "ꔌ", "j", "ᔑ", "⌰", "m", "人", "⍛", "p", "q", "χ", "Ⲝ", "ਠ", "u", "⍚", "⍙", "ꕕ", "∀", "⋉"][i], r)
+        })
+        return str 
+        }
       }
       document.querySelector("input").onkeydown = () => {
         setTimeout(() => {
