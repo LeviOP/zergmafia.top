@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smag Convert</title>
+  </head>
+  <body>
+    <input type="text">
+    <pre id="output"></pre>
+    <script>
+      function translate(str) {
+        var str = str.toLowerCase();
+        ["⍋", "b", "c", "中", "Ψ", "⎎", "g", "⊑", "ꔌ", "j", "ᔑ", "⌰", "m", "人", "⍛", "p", "q", "χ", "Ⲝ", "ਠ", "u", "⍚", "⍙", "ꕕ", "∀", "⋉"].forEach((r, i) => {
+          str = str.replaceAll(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"][i], r)
+        })
+        return str 
+      }
+      document.querySelector("input").onkeydown = () => {
+        setTimeout(() => {
+          document.getElementById("output").innerText = translate(document.querySelector("input").value)
+        }, 10)
+      }
+    </script>
+  </body>
+</html>
