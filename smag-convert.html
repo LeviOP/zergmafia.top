@@ -36,7 +36,7 @@
         }
       }
       document.querySelector("input").onkeydown = (e) => {
-        if (e.key === "m" && (e.metaKey || e.ctrlKey)) return to = !to
+        if (e.key === "m" && (e.metaKey || e.ctrlKey)) to = !to
         setTimeout(() => {
           document.getElementById("output").innerText = translate(document.querySelector("input").value)
         }, 10)
