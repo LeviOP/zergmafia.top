@@ -14,7 +14,15 @@ https://security.stackexchange.com/a/33471/256841
 https://stackoverflow.com/q/67405033/11412703 | https://homiedb.party/img/stackfunnies/2021-05-05-tryna-get-me-banned.png
     </pre>
     <script>
-      document.querySelector("pre").innerHTML.split("\n")
+      var output = []
+      document.querySelector("pre").innerHTML.split("\n").forEach(line => {
+          if (!line.includes("|") && !line.includes("[") && line.includes("http")) {
+              output.push(`<a href="${line}">${line}</a>`)
+          } else {
+              output.push(line)
+          }
+      })
+      console.log(output)
     </script>
   </body>
 </html>
