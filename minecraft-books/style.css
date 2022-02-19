@@ -1,0 +1,93 @@
+@font-face {
+    font-family: minecraft;
+    src: url("assets/fonts/MinecraftRegular-Bmg3.otf");
+}
+* {
+    margin: 0;
+    font-family: minecraft;
+}
+
+#book-list {
+    padding: 0;
+    margin: 10px;
+}
+
+.book {
+    width: 36.5em;
+    height: 45em;
+    margin: auto;
+    margin-top: 1em;
+    background-image: url("assets/book.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+    display: grid; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "pages"
+        "content"
+        "pagenav"; 
+}
+
+#pages {
+    grid-area: pages;
+    height: 50px;
+    justify-self: right;
+    font-size: 34px;
+    padding-top: 52px;
+    padding-right: 92px;
+}
+
+#content {
+    grid-area: content;
+    height: 531px;
+    font-size: 40px;
+    width: 29.2rem;
+    word-break: break-word;
+    line-height: 37px;
+    white-space: pre-wrap;
+    padding: 0 62px;
+}
+
+.pagenav {
+    display: grid; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "left right"; 
+    grid-area: pagenav; 
+}
+
+#left {
+    grid-area: left;
+    background-image: url("assets/left.png");
+    margin-left: 6.6em;
+}
+
+#left:hover {
+    background-image: url("assets/left-s.png");
+}
+
+#right {
+    grid-area: right;
+    background-image: url("assets/right.png");
+    justify-self: right;
+    margin-right: 8em;
+}
+
+#right:hover {
+    background-image: url("assets/right-s.png");
+}
+
+.button {
+    position: relative;
+    width: 4.8em;
+    height: 2.8em;
+    border: none;
+    background-color: unset;
+    padding: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+    align-self: end;
+    margin-bottom: 2.6em;
+}
