@@ -20,7 +20,7 @@
     background-image: url("assets/book.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
     display: grid; 
     gap: 0px 0px; 
     grid-template-areas: 
@@ -87,7 +87,7 @@
     padding: 0;
     background-size: 100%;
     background-repeat: no-repeat;
-    image-rendering: crisp-edges;
+    image-rendering: pixelated;
     align-self: end;
     margin-bottom: 2.6em;
 }
