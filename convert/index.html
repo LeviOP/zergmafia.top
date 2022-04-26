@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Convert</title>
+        <style>
+            * {
+                margin: 0;
+            }
+
+            #container {
+                display: flex;
+                justify-content: center;
+                height: 50vh;
+            }
+
+            #container > div {
+                margin: 5px;
+            }
+
+            .lang {
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+            }
+
+            textarea {
+                width: 99%;
+                height: 100%;
+                resize: none;
+            }
+
+            #switch {
+                align-self: center;
+            }
+
+            span {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="lang">
+                <span>English</span>
+                <textarea id="eng"></textarea>
+            </div>
+            <div id="switch">⇄</div>
+            <div class="lang">
+                <span>Lexinese</span>
+                <textarea id="lex"></textarea>
+            </div>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
