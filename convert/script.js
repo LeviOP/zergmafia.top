@@ -72,3 +72,14 @@ eng.addEventListener("input", () => {
     }
     lex.value = output;
 })
+
+lex.addEventListener("input", () => {
+    let output = "";
+    const chars = lex.value.split("");
+    for (let i = 0; i < chars.length; i++) {
+        const char = chars[i];
+        if (Object.values(lexLangA).includes(char)) output += Object.keys(lexLangA)[Object.values(lexLangA).indexOf(char)];
+        else output += Object.keys(lexLang)[Object.values(lexLang).indexOf(char)] || char;
+    }
+    eng.value = output;
+})
