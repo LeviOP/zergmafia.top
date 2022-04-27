@@ -35,7 +35,7 @@ const lexLang = {
 const lexLangA = {
     "qu": "µ",
     "sh": "Σ",
-    "th": "ж",
+    "th": "ß",
     "ch": "ч",
     "ph": "क",
     "wh": "᛭",
